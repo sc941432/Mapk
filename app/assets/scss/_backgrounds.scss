@@ -1,0 +1,25 @@
+@use "bootstrap" as bs;
+
+.banner {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+}
+
+@include bs.color-mode(light) {
+  .banner-home {
+    background-image: url("/images/illustrations/heart.jpg");
+  }
+}
+
+@include bs.color-mode(dark) {
+  .banner-home {
+    background-image: url("/images/illustrations/heart.jpg");
+    background-blend-mode: difference;
+  }
+}
+
+.banner-access {
+  background-image: url("/images/illustrations/fields.jpg");
+}

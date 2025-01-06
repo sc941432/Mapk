@@ -1,0 +1,90 @@
+@use "bootstrap" as bs;
+
+.form-floating>.form-control~label::after, .form-floating>.form-select~label::after {
+  background-color: transparent!important;
+}
+
+input:read-only {
+  background-color: var(--bs-tertiary-bg);
+}
+
+input:disabled:hover, input:disabled:focus {
+  background-color: var(--bs-secondary-bg);
+}
+
+input:read-only:not([type="checkbox"]):hover, input:read-only:not([type="checkbox"]):focus {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.form-floating>.form-control:read-only~label::after {
+  background-color: var(--bs-tertiary-bg)!important;
+}
+
+.form-floating>.form-control:disabled~label::after {
+  background-color: var(--bs-secondary-bg)!important;
+}
+
+.form-floating>.form-control:read-only.bg-body~label::after {
+  background-color: var(--bs-body-color-rgb)!important;
+}
+
+.form-control::placeholder {
+  color: rgb(var(--bs-body-color-rgb) .65);
+}
+
+.form-control:focus, .form-check-input:focus, .form-select:focus {
+  border-color: var(--bs-primary);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(221 67 67 / 25%);
+}
+
+.form-switch .form-check-input {
+  height: 1.5em;
+  width: 3em;
+}
+
+.form-switch .form-check-input:focus {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:checked {
+  --bs-form-switch-bg: var(--switch-bg);
+
+  background-color: var(--bs-secondary)!important;
+  border-color: var(--bs-primary);
+}
+
+.focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem #dd434340;
+  outline: 0;
+}
+
+@include bs.color-mode(dark) {
+  .form-floating>:disabled~label, .form-floating>.form-control:disabled~label {
+    /* stylelint-disable -- This problem is ignorable. */
+    color: rgba(var(--bs-body-color-rgb), 0.75);
+  }
+}
+
+.image-upload>input {
+  display: none;
+}
+
+.image-upload label .overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-upload label:hover .overlay {
+  opacity: .85;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Fredoka;
+  src: url("/fonts/Fredoka-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Fredoka;
+  font-weight: bold;
+  src: url("/fonts/Fredoka-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Fredoka;
+  font-weight: 500;
+  src: url("/fonts/Fredoka-Medium.ttf") format("truetype");
+}
+
+:root {
+  --vp-c-brand-1: #c25050;
+  --vp-c-brand-2: #a54444;
+  --accent: #ffe1e1;
+  --vp-font-family-base: fredoka;
+}
+
+html.dark {
+  --vp-c-brand-1: #ff9f98;
+  --vp-c-brand-2: #ff9f98;
+  --accent: var(--vp-sidebar-bg-color);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--accent);
+}
+
+*::-webkit-scrollbar-thumb {
+  height: 56px;
+  border-radius: 8px;
+  border: 0 solid transparent;
+  background-clip: content-box;
+  background-color: var(--vp-c-brand-1);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vp-c-brand-1);
+}
+
+::selection {
+  background: var(--vp-c-brand-1);
+  color: var(--accent);
+}

@@ -1,0 +1,5 @@
+export const enum Quota {
+  FREE_MARKERS = 10,
+  FREE_IMAGE_FILESIZE = "2MB",
+  PREMIUM_IMAGE_FILESIZE = "16MB"
+}
