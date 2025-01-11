@@ -1,0 +1,9 @@
+name = "mappedlove"
+main = "./dist/_worker.js" # Adjust the path if your worker file is elsewhere
+compatibility_date = "2025-01-11" # Use today's date
+
+[build]
+command = "npm run build"
+
+[compatibility_flags]
+  - "nodejs_compat"
