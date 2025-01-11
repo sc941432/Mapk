@@ -26,7 +26,7 @@
     "lint:stylelint": "stylelint \"**/*.{css,scss,sass}\" --config .config/stylelint.json",
     "lint:eslint:inspect": "npx @eslint/config-inspector --config .config/eslint.mjs",
     "cf:toml": "npx wrangler pages download config mappedlove",
-    "cf:dev": "npm run cf:toml && set NITRO_PRESET=cloudflare-pages&&npm run build && wrangler pages dev dist",
+    "cf:dev": "npm run cf:toml && set NITRO_PRESET=cloudflare-pages&&npm run build && wrangler pages dev dist --compatibility-flag=nodejs_compat",
     "docs:dev": "vitepress dev docs",
     "docs:build": "(git fetch --unshallow || git fetch --all) && vitepress build docs",
     "docs:serve": "vitepress serve docs",
